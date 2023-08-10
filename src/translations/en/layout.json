@@ -1,0 +1,11 @@
+{
+  "navbar": {
+    "items": {
+      "assets": "Assets",
+      "companies": "Companies",
+      "units": "Units",
+      "users": "Users"
+    }
+  },
+  "change-language": "Change language"
+}
