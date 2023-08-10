@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource-variable/inter": "^5.0.8",
+    "antd": "^5.8.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
