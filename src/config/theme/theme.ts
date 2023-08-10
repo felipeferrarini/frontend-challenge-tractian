@@ -1,5 +1,6 @@
 import '@fontsource-variable/inter';
 import type { ThemeConfig } from 'antd';
+import colors from './colors';
 
 export const theme: ThemeConfig = {
   components: {
@@ -9,7 +10,7 @@ export const theme: ThemeConfig = {
   },
   token: {
     fontSize: 16,
-    colorPrimary: '#1D4ED8',
+    colorPrimary: colors['primary-400'],
     fontFamily: 'Inter Variable, sans-serif',
     borderRadius: 8
   }

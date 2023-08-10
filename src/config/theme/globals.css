@@ -1,13 +1,14 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
-}
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
 
-body,
-html {
-  overflow-x: hidden;
+@layer base {
+  * {
+    @apply m-0 box-border scroll-smooth p-0 font-sans antialiased;
+  }
+
+  body,
+  html {
+    @apply overflow-x-hidden;
+  }
 }

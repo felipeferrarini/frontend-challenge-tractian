@@ -26,7 +26,7 @@ export const LanguageSwitch = (): JSX.Element => {
           ...item,
           onClick: () => i18n.changeLanguage(item.key)
         })),
-        style: { padding: '8px' }
+        className: '!p-2'
       }}
       trigger={['click']}
       arrow
@@ -36,7 +36,6 @@ export const LanguageSwitch = (): JSX.Element => {
         size="large"
         type="primary"
         icon={<Icon component={MdGTranslate} />}
-        style={{ marginLeft: 'auto' }}
       >
         {isMobile ? null : t('change-language')}
       </Button>

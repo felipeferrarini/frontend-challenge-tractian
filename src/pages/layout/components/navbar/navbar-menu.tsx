@@ -5,17 +5,17 @@ import { navbarItems } from './constants';
 
 type Props = {
   mode: 'horizontal' | 'vertical';
-  style?: React.CSSProperties;
+  className?: string;
 };
 
-export const NavbarMenu = ({ mode, style }: Props): JSX.Element => {
+export const NavbarMenu = ({ mode, className }: Props): JSX.Element => {
   const { t } = useTranslation('layout');
   const { pathname } = useLocation();
 
   return (
     <Menu
       mode={mode}
-      style={style}
+      className={className}
       selectedKeys={[pathname]}
       items={navbarItems.map(({ i18nKey, icon, href }) => ({
         icon,

@@ -22,9 +22,6 @@ export const Navbar = (): JSX.Element => {
   }
 
   return (
-    <NavbarMenu
-      style={{ justifyContent: 'center', height: 50, gap: 16 }}
-      mode="horizontal"
-    />
+    <NavbarMenu className="h-[50px] justify-center gap-4" mode="horizontal" />
   );
 };

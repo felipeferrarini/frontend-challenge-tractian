@@ -4,16 +4,15 @@ import { Footer, Header, Navbar } from './components';
 
 export const LayoutPage = () => {
   return (
-    <Layout style={{ minHeight: '100vh' }}>
+    <Layout className="min-h-screen">
       <Layout>
         <Header />
         <Navbar />
-        <Layout.Content style={{ padding: '24px 24px 0', display: 'flex' }}>
+        <Layout.Content className="p-6 pb-0 flex">
           <Card
             style={{ flex: 1 }}
-            bodyStyle={{
-              height: '100%'
-            }}
+            className="flex-1"
+            bodyStyle={{ height: '100%' }}
           >
             <Outlet />
           </Card>
