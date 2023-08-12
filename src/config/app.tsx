@@ -1,5 +1,5 @@
 import { RouterProvider } from 'react-router-dom';
-import { setupI18n } from './i18n/i18n';
+import { setupI18n } from './libs';
 import { Providers } from './providers';
 import { router } from './routes';
 import './theme/globals.css';

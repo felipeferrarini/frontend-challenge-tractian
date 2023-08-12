@@ -1,7 +1,7 @@
 import { useIsMobile } from '@/hooks';
-import { useDrawerStore } from '@/store';
 import { MenuOutlined } from '@ant-design/icons';
 import { Button, Layout, Space, Typography } from 'antd';
+import { useDrawerStore } from '../../stores';
 import { LanguageSwitch } from './language-switch';
 
 export const Header = (): JSX.Element => {
@@ -9,8 +9,8 @@ export const Header = (): JSX.Element => {
   const onOpen = useDrawerStore(store => store.onOpen);
 
   return (
-    <Layout.Header className="bg-primary-500 px-6">
-      <div className="inline-flex w-full justify-between">
+    <Layout.Header className="bg-primary-500 flex justify-center px-6">
+      <div className="container inline-flex w-full justify-between">
         <Space>
           {isMobile && (
             <Button type="primary" onClick={onOpen} icon={<MenuOutlined />} />

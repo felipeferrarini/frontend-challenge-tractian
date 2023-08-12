@@ -1,13 +1,20 @@
-import { Typography } from 'antd';
+import { Button, Result } from 'antd';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
-export const NotFoundPage = (): JSX.Element => {
+export const Component = (): JSX.Element => {
   const { t } = useTranslation('notFound');
 
   return (
-    <div className="flex flex-1 h-full justify-center flex-col gap-6 text-center">
-      <Typography.Title level={2}>{t('title')}</Typography.Title>
-      <Typography.Text>{t('body')}</Typography.Text>
-    </div>
+    <Result
+      status="404"
+      title={t('title')}
+      subTitle={t('body')}
+      extra={
+        <Link to="/">
+          <Button type="primary">{t('action')}</Button>
+        </Link>
+      }
+    />
   );
 };

@@ -1,6 +1,6 @@
 import { useIsMobile } from '@/hooks';
-import { useDrawerStore } from '@/store';
 import { Drawer } from 'antd';
+import { useDrawerStore } from '../../stores';
 import { NavbarMenu } from './navbar-menu';
 
 export const Navbar = (): JSX.Element => {
