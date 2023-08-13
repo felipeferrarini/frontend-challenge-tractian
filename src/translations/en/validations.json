@@ -1,3 +1,4 @@
 {
-  "required-field": "Required field"
+  "required-field": "Required field",
+  "valid-email": "Please enter a valid email address"
 }

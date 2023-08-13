@@ -26,7 +26,7 @@ export const Component = (): JSX.Element | null => {
   return (
     <Card className="mx-auto w-full max-w-2xl">
       <Space className="w-full" direction="vertical" size={24}>
-        <PageHeader title={t('edit-title')} backButtonLink={`/units`} />
+        <PageHeader title={t('form.edit-title')} backButtonLink={`/units`} />
         <UnitForm
           handleSubmit={handleSubmit}
           onCancel={() => navigate('/units')}

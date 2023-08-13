@@ -22,6 +22,11 @@ export const validations = (t: TFunction) => ({
   String: () => {
     return string().required(t(requiredKey));
   },
+  Email: () => {
+    return string()
+      .email(t('validations:valid-email'))
+      .required(t(requiredKey));
+  },
   Number: () => {
     return number().required(t(requiredKey));
   },
