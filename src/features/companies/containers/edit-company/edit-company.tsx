@@ -1,35 +1,35 @@
 import { LoadingState } from '@/components/feedback';
 import { PageHeader } from '@/components/layout';
-import { useEditAsset } from '@/features/assets/hooks';
+import { useEditCompany } from '@/features/companies/hooks';
 import { Card, Space } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
-import { AssetForm, NotFoundState } from '../../components';
+import { CompanyForm } from '../../components';
 
-export const Component = (): JSX.Element => {
+export const Component = (): JSX.Element | null => {
   const { id = '0' } = useParams();
 
   const { t } = useTranslation('createAsset');
   const navigate = useNavigate();
 
   const { control, handleSubmit, initialValues, isSubmitting, isLoading } =
-    useEditAsset(Number(id));
+    useEditCompany(Number(id));
 
   if (isLoading) {
     return <LoadingState />;
   }
 
   if (!initialValues) {
-    return <NotFoundState />;
+    return null;
   }
 
   return (
-    <Card className="mx-auto">
+    <Card className="mx-auto w-full max-w-2xl">
       <Space className="w-full" direction="vertical" size={24}>
-        <PageHeader title={t('edit-title')} backButtonLink={`/assets/${id}`} />
-        <AssetForm
+        <PageHeader title={t('edit-title')} backButtonLink={`/companies`} />
+        <CompanyForm
           handleSubmit={handleSubmit}
-          onCancel={() => navigate('/assets')}
+          onCancel={() => navigate('/companies')}
           control={control}
           isSubmitting={isSubmitting}
           initialValues={initialValues}

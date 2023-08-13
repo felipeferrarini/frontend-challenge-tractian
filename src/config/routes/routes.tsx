@@ -1,4 +1,6 @@
+import { assetsRoutes } from '@/features/assets/routes';
 import { ErrorPage, LayoutPage } from '@/features/common/containers';
+import { companiesRoutes } from '@/features/companies/routes';
 import { createBrowserRouter } from 'react-router-dom';
 
 export const router = createBrowserRouter([
@@ -7,22 +9,8 @@ export const router = createBrowserRouter([
     element: <LayoutPage />,
     errorElement: <ErrorPage />,
     children: [
-      {
-        path: '/assets',
-        lazy: () => import('@/features/assets/containers/list-assets')
-      },
-      {
-        path: '/assets/create',
-        lazy: () => import('@/features/assets/containers/create-asset')
-      },
-      {
-        path: '/assets/:id',
-        lazy: () => import('@/features/assets/containers/asset-details')
-      },
-      {
-        path: '/assets/:id/edit',
-        lazy: () => import('@/features/assets/containers/edit-asset')
-      },
+      ...assetsRoutes,
+      ...companiesRoutes,
       {
         path: '*',
         lazy: () => import('@/features/common/containers/not-found-page')

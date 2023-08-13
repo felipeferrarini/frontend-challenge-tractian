@@ -1,9 +1,10 @@
+import { LoadingState } from '@/components/feedback';
 import { PageHeader } from '@/components/layout';
 import { useDeleteAsset } from '@/features/assets/hooks';
 import { useGetAsset } from '@/features/assets/services';
 import { Space } from 'antd';
 import { useNavigate, useParams } from 'react-router-dom';
-import { LoadingState, NotFoundState } from '../../components';
+import { NotFoundState } from '../../components';
 import { DetailsCard, PageActions, StatusCard } from './components';
 
 export const Component = (): JSX.Element => {

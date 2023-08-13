@@ -1,4 +1,5 @@
 export { default as common } from './common.json';
+export { default as companies } from './companies.json';
 export { default as createAsset } from './create-asset.json';
 export { default as dictionary } from './dictionary.json';
 export { default as errors } from './errors.json';
