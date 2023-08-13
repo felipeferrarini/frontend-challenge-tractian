@@ -5,5 +5,8 @@
   "no": "No",
   "yes": "Yes",
   "view": "View",
-  "options": "Options"
+  "options": "Options",
+  "save": "Save",
+  "cancel": "Cancel",
+  "select": "Select"
 }

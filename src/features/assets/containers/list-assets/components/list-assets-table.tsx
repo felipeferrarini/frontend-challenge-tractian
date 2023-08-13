@@ -40,7 +40,7 @@ export const ListAssetsTable = ({
       key: 'status',
       render: (status: string) => (
         <Tag color={mapStatusToColor(status)}>
-          {t(`common:assetStatus.${status}`)}
+          {t(`common:asset-status.${status}`)}
         </Tag>
       ),
       responsive: ['sm']

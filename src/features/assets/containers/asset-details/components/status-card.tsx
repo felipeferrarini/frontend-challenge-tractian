@@ -53,7 +53,7 @@ export const StatusCard = ({ asset }: Props): JSX.Element => {
             title={t('status-card.status')}
             valueRender={() => (
               <Tag className="text-3xl" color={mapStatusToColor(status)}>
-                {t(`common:assetStatus.${status}`)}
+                {t(`common:asset-status.${status}`)}
               </Tag>
             )}
           />

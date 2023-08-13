@@ -12,6 +12,10 @@ export const router = createBrowserRouter([
         lazy: () => import('@/features/assets/containers/list-assets')
       },
       {
+        path: '/assets/create',
+        lazy: () => import('@/features/assets/containers/create-asset')
+      },
+      {
         path: '/assets/:id',
         lazy: () => import('@/features/assets/containers/asset-details')
       },

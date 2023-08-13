@@ -10,7 +10,7 @@
     "sensors": "Sensores",
     "maxTemp": "Temperatura Máxima (°C)",
     "power": "Potência (kWh)",
-    "rpm": "RPM"
+    "rpm": "Rotação (rpm)"
   },
   "status-card": {
     "title": "Status",

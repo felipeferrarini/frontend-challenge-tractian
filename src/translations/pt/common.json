@@ -1,5 +1,5 @@
 {
-  "assetStatus": {
+  "asset-status": {
     "inAlert": "Em alerta",
     "inDowntime": "Inativo",
     "inOperation": "Em operação",
