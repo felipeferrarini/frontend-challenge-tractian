@@ -1,10 +1,10 @@
 import { TableActions } from '@/components/data-display';
-import { IAsset } from '@/interfaces';
+import { IAsset } from '@/features/assets/entities';
+import { mapStatusToColor } from '@/features/assets/utils';
 import { Progress, Table, Tag } from 'antd';
 import { ColumnsType } from 'antd/es/table';
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
-import { mapStatusToColor } from '../utils';
 
 type Props = {
   assets: IAsset[];

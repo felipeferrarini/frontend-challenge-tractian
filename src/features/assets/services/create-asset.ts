@@ -1,5 +1,9 @@
 import { httpClient } from '@/config/libs';
-import { IAsset, IAssetSpecifications, StatusEnum } from '@/interfaces';
+import {
+  IAsset,
+  IAssetSpecifications,
+  StatusEnum
+} from '@/features/assets/entities';
 
 export interface CreateAssetDto {
   model: string;

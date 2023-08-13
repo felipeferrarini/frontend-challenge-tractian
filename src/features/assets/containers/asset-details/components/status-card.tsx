@@ -1,6 +1,6 @@
 import { GaugeChart } from '@/components/data-display';
-import { IAsset } from '@/interfaces';
-import { mapStatusToColor } from '@/pages/list-assets/utils';
+import { IAsset } from '@/features/assets/entities';
+import { mapStatusToColor } from '@/features/assets/utils';
 import { formatDate } from '@/utils';
 import { Card, Col, Row, Statistic, Tag } from 'antd';
 import { useTranslation } from 'react-i18next';

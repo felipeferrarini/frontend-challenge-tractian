@@ -1,6 +1,6 @@
+import { IAsset } from '@/features/assets/entities';
+import { deleteAsset } from '@/features/assets/services';
 import { useConfirmationModal } from '@/hooks';
-import { IAsset } from '@/interfaces';
-import { deleteAsset } from '@/services/assets';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 

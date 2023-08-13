@@ -1,7 +1,7 @@
+import { useDrawerStore } from '@/features/common/stores';
 import { useIsMobile } from '@/hooks';
 import { MenuOutlined } from '@ant-design/icons';
 import { Button, Layout, Space, Typography } from 'antd';
-import { useDrawerStore } from '../../stores';
 import { LanguageSwitch } from './language-switch';
 
 export const Header = (): JSX.Element => {

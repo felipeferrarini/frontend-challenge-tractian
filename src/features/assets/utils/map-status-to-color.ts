@@ -1,4 +1,4 @@
-import { StatusEnum } from '@/interfaces';
+import { StatusEnum } from '@/features/assets/entities';
 
 export const mapStatusToColor = (status: string) => {
   const map: Record<StatusEnum, string> = {

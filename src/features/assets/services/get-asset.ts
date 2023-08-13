@@ -1,5 +1,5 @@
 import { httpClient } from '@/config/libs';
-import { IAsset } from '@/interfaces';
+import { IAsset } from '@/features/assets/entities';
 import { useQuery } from '@tanstack/react-query';
 
 export const getAsset = async (id: number): Promise<IAsset | null> => {

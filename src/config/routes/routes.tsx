@@ -1,5 +1,4 @@
-import { ErrorPage } from '@/pages/error';
-import { LayoutPage } from '@/pages/layout';
+import { ErrorPage, LayoutPage } from '@/features/common/containers';
 import { createBrowserRouter } from 'react-router-dom';
 
 export const router = createBrowserRouter([
@@ -10,15 +9,15 @@ export const router = createBrowserRouter([
     children: [
       {
         path: '/assets',
-        lazy: () => import('@/pages/list-assets')
+        lazy: () => import('@/features/assets/containers/list-assets')
       },
       {
         path: '/assets/:id',
-        lazy: () => import('@/pages/asset-details')
+        lazy: () => import('@/features/assets/containers/asset-details')
       },
       {
         path: '*',
-        lazy: () => import('@/pages/not-found')
+        lazy: () => import('@/features/common/containers/not-found-page')
       }
     ]
   }

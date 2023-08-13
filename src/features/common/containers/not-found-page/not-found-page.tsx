@@ -8,6 +8,7 @@ export const Component = (): JSX.Element => {
   return (
     <Result
       status="404"
+      className="w-full"
       title={t('title')}
       subTitle={t('body')}
       extra={

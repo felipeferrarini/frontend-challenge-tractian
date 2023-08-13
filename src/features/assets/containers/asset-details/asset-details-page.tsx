@@ -1,8 +1,8 @@
 import { PageHeader } from '@/components/layout';
-import { useGetAsset } from '@/services/assets';
+import { useDeleteAsset } from '@/features/assets/hooks';
+import { useGetAsset } from '@/features/assets/services';
 import { Space } from 'antd';
 import { useNavigate, useParams } from 'react-router-dom';
-import { useDeleteAsset } from '../list-assets/hooks';
 import {
   DetailsCard,
   LoadingState,

@@ -1,4 +1,4 @@
-import { IAsset } from '@/interfaces';
+import { IAsset } from '@/features/assets/entities';
 import { Card, Image, Skeleton, Space, Tag, Typography } from 'antd';
 import { useTranslation } from 'react-i18next';
 

@@ -1,12 +1,12 @@
 import { PageHeader } from '@/components/layout';
-import { useListAssets } from '@/services/assets';
+import { useDeleteAsset } from '@/features/assets/hooks';
+import { useListAssets } from '@/features/assets/services';
 import { PlusCircleOutlined } from '@ant-design/icons';
 import { Button, Card, Input, Space } from 'antd';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { ListAssetsTable } from './components/list-assets-table';
-import { useDeleteAsset } from './hooks/use-delete-asset';
 
 export const Component = () => {
   const { t } = useTranslation('listAssets');
