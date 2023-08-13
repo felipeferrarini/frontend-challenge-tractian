@@ -7,4 +7,5 @@ export { default as errors } from './errors.json';
 export { default as layout } from './layout.json';
 export { default as listAssets } from './list-assets.json';
 export { default as notFound } from './not-found.json';
+export { default as units } from './units.json';
 export { default as validations } from './validations.json';
