@@ -5,13 +5,5 @@
     "inOperation": "In Operation",
     "plannedStop": "Planned Stop",
     "unplannedStop": "Unplanned Stop"
-  },
-  "dictionary": {
-    "search": "Search",
-    "delete": "Delete",
-    "edit": "Edit",
-    "no": "No",
-    "yes": "Yes",
-    "view": "View"
   }
 }

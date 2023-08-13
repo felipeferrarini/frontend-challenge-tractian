@@ -13,6 +13,10 @@ export const router = createBrowserRouter([
         lazy: () => import('@/pages/list-assets')
       },
       {
+        path: '/assets/:id',
+        lazy: () => import('@/pages/asset-details')
+      },
+      {
         path: '*',
         lazy: () => import('@/pages/not-found')
       }

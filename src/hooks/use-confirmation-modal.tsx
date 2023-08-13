@@ -14,7 +14,7 @@ export const useConfirmationModal = <T,>({
   title
 }: Props<T>) => {
   const [modal, contextHolder] = Modal.useModal();
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('dictionary');
 
   const openModal = useCallback(
     (data: T) => {
@@ -22,8 +22,8 @@ export const useConfirmationModal = <T,>({
         title,
         content: description,
         onOk: () => onConfirm(data),
-        okText: t('dictionary.yes'),
-        cancelText: t('dictionary.no')
+        okText: t('yes'),
+        cancelText: t('no')
       });
     },
     [description, modal, onConfirm, t, title]

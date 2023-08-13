@@ -22,20 +22,20 @@ export const TableActions = <T,>({
   onDelete,
   onEdit
 }: Props<T>): JSX.Element => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('dictionary');
 
   const items = useMemo(() => {
     return [
       {
         key: 'edit',
-        label: t('dictionary.edit'),
+        label: t('edit'),
         icon: <EditOutlined />,
         onClick: () => onEdit?.(data),
         disabled: !onEdit
       },
       {
         key: 'delete',
-        label: t('dictionary.delete'),
+        label: t('delete'),
         icon: <DeleteOutlined />,
         onClick: () => onDelete?.(data),
         danger: true,
@@ -47,9 +47,9 @@ export const TableActions = <T,>({
   return (
     <Space>
       {viewHref && (
-        <Tooltip title={t('dictionary.view')}>
+        <Tooltip title={t('view')}>
           <Link to={viewHref}>
-            <Button icon={<EyeOutlined />} aria-label={t('dictionary.view')} />
+            <Button icon={<EyeOutlined />} aria-label={t('view')} />
           </Link>
         </Tooltip>
       )}

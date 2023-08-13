@@ -4,13 +4,18 @@ import { deleteAsset } from '@/services/assets';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 
-export const useDeleteAsset = () => {
+type Props = {
+  onSuccess?: () => void;
+};
+
+export const useDeleteAsset = ({ onSuccess }: Props = {}) => {
   const { t } = useTranslation('listAssets');
   const queryClient = useQueryClient();
 
   const { mutateAsync } = useMutation(deleteAsset, {
     onSuccess: () => {
       queryClient.invalidateQueries(['list-assets']);
+      onSuccess?.();
     }
   });
 

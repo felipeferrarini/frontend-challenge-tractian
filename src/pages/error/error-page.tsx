@@ -5,15 +5,17 @@ export const ErrorPage = (): JSX.Element => {
   const error = useRouteError() as any;
 
   return (
-    <Result
-      status="500"
-      title="500"
-      subTitle={error.message}
-      extra={
-        <Link to="/">
-          <Button type="primary">Back Home</Button>
-        </Link>
-      }
-    />
+    <div className="flex h-screen items-center justify-center">
+      <Result
+        status="500"
+        title="Ops, please inform the following error to the administrator."
+        subTitle={error.message}
+        extra={
+          <Link to="/">
+            <Button type="primary">Back Home</Button>
+          </Link>
+        }
+      />
+    </div>
   );
 };

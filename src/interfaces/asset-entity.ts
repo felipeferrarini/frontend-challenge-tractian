@@ -11,6 +11,7 @@ export interface IAsset {
   metrics: IAssetMetrics;
   specifications: IAssetSpecifications;
   unitId: number;
+  sensors: string[];
 }
 
 export interface IAssetHealthHistory {

@@ -1,7 +1,7 @@
 import { PageHeader } from '@/components/layout';
 import { useListAssets } from '@/services/assets';
 import { PlusCircleOutlined } from '@ant-design/icons';
-import { Button, Input, Space } from 'antd';
+import { Button, Card, Input, Space } from 'antd';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
@@ -16,35 +16,37 @@ export const Component = () => {
   const { deleteModal, onDelete } = useDeleteAsset();
 
   return (
-    <Space direction="vertical" className="w-full" size={24}>
-      <PageHeader
-        title={t('title')}
-        actions={
-          <Link to="create">
-            <Button type="primary" size="large" icon={<PlusCircleOutlined />}>
-              {t('add-asset')}
-            </Button>
-          </Link>
-        }
-      />
+    <Card className="w-full">
+      <Space direction="vertical" className="w-full" size={24}>
+        <PageHeader
+          title={t('title')}
+          actions={
+            <Link to="create">
+              <Button type="primary" size="large" icon={<PlusCircleOutlined />}>
+                {t('add-asset')}
+              </Button>
+            </Link>
+          }
+        />
 
-      <Input.Search
-        placeholder={t('search-for')}
-        size="large"
-        allowClear
-        enterButton
-        className="max-w-md"
-        onSearch={setSearch}
-        loading={isLoading}
-      />
+        <Input.Search
+          placeholder={t('search-for')}
+          size="large"
+          allowClear
+          enterButton
+          className="max-w-md"
+          onSearch={setSearch}
+          loading={isLoading}
+        />
 
-      <ListAssetsTable
-        assets={data}
-        isLoading={isLoading}
-        onDelete={onDelete}
-      />
+        <ListAssetsTable
+          assets={data}
+          isLoading={isLoading}
+          onDelete={onDelete}
+        />
 
-      {deleteModal}
-    </Space>
+        {deleteModal}
+      </Space>
+    </Card>
   );
 };
