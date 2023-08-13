@@ -1,5 +1,6 @@
 {
   "title": "New Asset",
+  "edit-title": "Edit Asset",
   "form": {
     "model": "Model",
     "name": "Name",

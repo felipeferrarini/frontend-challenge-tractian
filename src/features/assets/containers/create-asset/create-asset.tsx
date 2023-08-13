@@ -3,10 +3,10 @@ import { useCreateAsset } from '@/features/assets/hooks';
 import { Card, Space } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import { AssetForm } from './components';
+import { AssetForm } from '../../components';
 
 export const Component = (): JSX.Element => {
-  const { control, handleSubmit, isLoading } = useCreateAsset();
+  const { control, handleSubmit, isSubmitting } = useCreateAsset();
   const navigate = useNavigate();
   const { t } = useTranslation('createAsset');
 
@@ -18,7 +18,7 @@ export const Component = (): JSX.Element => {
           handleSubmit={handleSubmit}
           onCancel={() => navigate('/assets')}
           control={control}
-          isSubmitting={isLoading}
+          isSubmitting={isSubmitting}
         />
       </Space>
     </Card>

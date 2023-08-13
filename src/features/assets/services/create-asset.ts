@@ -17,7 +17,7 @@ export type CreateAssetDto = {
   companyId: number;
 };
 
-const mapPayloadToAsset = (payload: CreateAssetDto) => {
+export const mapPayloadToAsset = (payload: CreateAssetDto) => {
   const { maxTemp, power, rpm } = payload;
 
   const specifications: IAssetSpecifications = {

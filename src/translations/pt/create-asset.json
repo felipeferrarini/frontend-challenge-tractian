@@ -1,5 +1,6 @@
 {
   "title": "Novo Ativo",
+  "edit-title": "Editar Ativo",
   "form": {
     "model": "Modelo",
     "name": "Nome",

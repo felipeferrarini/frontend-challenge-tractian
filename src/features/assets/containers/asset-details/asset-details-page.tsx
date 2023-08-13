@@ -3,13 +3,8 @@ import { useDeleteAsset } from '@/features/assets/hooks';
 import { useGetAsset } from '@/features/assets/services';
 import { Space } from 'antd';
 import { useNavigate, useParams } from 'react-router-dom';
-import {
-  DetailsCard,
-  LoadingState,
-  NotFoundState,
-  PageActions,
-  StatusCard
-} from './components';
+import { LoadingState, NotFoundState } from '../../components';
+import { DetailsCard, PageActions, StatusCard } from './components';
 
 export const Component = (): JSX.Element => {
   const { id = '0' } = useParams();
