@@ -11,15 +11,13 @@ type Props = {
   onCancel?: () => void;
   control: Control<CreateUserDto, any>;
   isSubmitting?: boolean;
-  initialValues?: Partial<CreateUserDto>;
 };
 
 export const UserForm = ({
   handleSubmit,
   onCancel,
   control,
-  isSubmitting,
-  initialValues
+  isSubmitting
 }: Props) => {
   const { t } = useTranslation('users');
   const { data: companies } = useListCompanies();
@@ -27,7 +25,6 @@ export const UserForm = ({
 
   return (
     <Form
-      initialValues={initialValues}
       onFinish={handleSubmit}
       className="w-full max-w-2xl"
       layout="vertical"

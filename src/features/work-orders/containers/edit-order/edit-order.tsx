@@ -1,19 +1,19 @@
 import { LoadingState } from '@/components/feedback';
 import { PageHeader } from '@/components/layout';
-import { useEditUnit } from '@/features/units/hooks';
+import { useEditWorkOrder } from '@/features/work-orders/hooks';
 import { Card, Space } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
-import { UnitForm } from '../../components';
+import { WorkOrderForm } from '../../components';
 
 export const Component = (): JSX.Element | null => {
   const { id = '0' } = useParams();
 
-  const { t } = useTranslation('units');
+  const { t } = useTranslation('workOrders');
   const navigate = useNavigate();
 
   const { control, handleSubmit, initialValues, isSubmitting, isLoading } =
-    useEditUnit(Number(id));
+    useEditWorkOrder(Number(id));
 
   if (isLoading) {
     return <LoadingState />;
@@ -26,12 +26,16 @@ export const Component = (): JSX.Element | null => {
   return (
     <Card className="mx-auto w-full max-w-2xl">
       <Space className="w-full" direction="vertical" size={24}>
-        <PageHeader title={t('form.edit-title')} backButtonLink={`/units`} />
-        <UnitForm
+        <PageHeader
+          title={t('form.edit-title')}
+          backButtonLink={`/workorders`}
+        />
+        <WorkOrderForm
           handleSubmit={handleSubmit}
-          onCancel={() => navigate('/units')}
+          onCancel={() => navigate('/workorders')}
           control={control}
           isSubmitting={isSubmitting}
+          initialValues={initialValues}
         />
       </Space>
     </Card>

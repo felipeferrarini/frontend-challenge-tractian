@@ -32,7 +32,6 @@ export const Component = (): JSX.Element | null => {
           onCancel={() => navigate('/users')}
           control={control}
           isSubmitting={isSubmitting}
-          initialValues={initialValues}
         />
       </Space>
     </Card>

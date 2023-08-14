@@ -10,22 +10,19 @@ type Props = {
   onCancel?: () => void;
   control: Control<CreateUnitDto, any>;
   isSubmitting?: boolean;
-  initialValues?: Partial<CreateUnitDto>;
 };
 
 export const UnitForm = ({
   handleSubmit,
   onCancel,
   control,
-  isSubmitting,
-  initialValues
+  isSubmitting
 }: Props) => {
   const { t } = useTranslation('units');
   const { data: companies } = useListCompanies();
 
   return (
     <Form
-      initialValues={initialValues}
       onFinish={handleSubmit}
       className="w-full max-w-2xl"
       layout="vertical"

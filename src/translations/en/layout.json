@@ -4,7 +4,9 @@
       "assets": "Assets",
       "companies": "Companies",
       "units": "Units",
-      "users": "Users"
+      "users": "Users",
+      "workorders": "Work Orders",
+      "dashboard": "Dashboard"
     }
   },
   "change-language": "Change language"

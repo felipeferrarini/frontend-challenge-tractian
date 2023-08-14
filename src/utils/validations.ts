@@ -22,6 +22,12 @@ export const validations = (t: TFunction) => ({
   String: () => {
     return string().required(t(requiredKey));
   },
+  StringArray: () => {
+    return array()
+      .of(string().required(t(requiredKey)))
+      .min(1, t(requiredKey))
+      .required(t(requiredKey));
+  },
   Email: () => {
     return string()
       .email(t('validations:valid-email'))
