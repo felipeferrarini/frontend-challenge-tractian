@@ -6,7 +6,7 @@ import { MinusCircleOutlined } from '@ant-design/icons';
 import { Button, Divider, Form, Input, Select, Space, Tooltip } from 'antd';
 import { Control, useController, useFieldArray } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
-import { WorkOrderPriority, WorkOrderStatus } from '../entities';
+import { OrderStatus, WorkOrderPriority } from '../entities';
 
 type Props = {
   handleSubmit: (e?: React.BaseSyntheticEvent) => void | Promise<void>;
@@ -155,7 +155,7 @@ export const WorkOrderForm = ({
             <Select
               placeholder={t('dictionary:select')}
               allowClear
-              options={Object.values(WorkOrderStatus)?.map(p => ({
+              options={Object.values(OrderStatus)?.map(p => ({
                 value: p,
                 label: t(`status.${p}`)
               }))}

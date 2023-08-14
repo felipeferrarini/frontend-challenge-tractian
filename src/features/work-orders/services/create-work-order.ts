@@ -1,5 +1,5 @@
 import { httpClient } from '@/config/libs';
-import { IWorkOrder, WorkOrderPriority, WorkOrderStatus } from '../entities';
+import { IWorkOrder, OrderStatus, WorkOrderPriority } from '../entities';
 
 export type CreateWorkOrderDto = {
   assetId: number;
@@ -8,7 +8,7 @@ export type CreateWorkOrderDto = {
   description: string;
   checklist: string[];
   priority: WorkOrderPriority;
-  status: WorkOrderStatus;
+  status: OrderStatus;
 };
 
 export const mapPayloadToOrder = (payload: CreateWorkOrderDto) => {

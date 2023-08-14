@@ -6,7 +6,7 @@ export interface IWorkOrder {
   description: string;
   checklist: IWorkOrderCheckList[];
   priority: WorkOrderPriority;
-  status: WorkOrderStatus;
+  status: OrderStatus;
 }
 
 export interface IWorkOrderCheckList {
@@ -20,7 +20,9 @@ export enum WorkOrderPriority {
   Low = 'low'
 }
 
-export enum WorkOrderStatus {
+export enum OrderStatus {
   Completed = 'completed',
-  InProgress = 'in progress'
+  InProgress = 'in progress',
+  OnHold = 'on hold',
+  Opened = 'opened'
 }

@@ -30,7 +30,9 @@
   },
   "status": {
     "completed": "Completed",
-    "in progress": "In Progress"
+    "in progress": "In Progress",
+    "on hold": "On Hold",
+    "opened": "Opened"
   },
   "priority": {
     "high": "High",
